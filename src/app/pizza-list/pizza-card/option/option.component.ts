@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { PizzaOption } from './option.model';
 
 @Component({
   selector: 'app-option',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './option.component.css'
 })
 export class OptionComponent {
-
+  option = input.required<PizzaOption>();
 }

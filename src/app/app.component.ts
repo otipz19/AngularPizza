@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { PizzaCardComponent } from './pizza-card/pizza-card.component';
+import { PizzaListComponent } from './pizza-list/pizza-list.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [PizzaCardComponent],
+  imports: [PizzaListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

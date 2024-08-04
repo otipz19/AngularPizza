@@ -1,0 +1,21 @@
+<div class="container">
+  @if(pizza().tag){
+    <app-tag [tag]="pizza().tag!"/>
+  }
+
+  <img [src]="pizza().img" />
+
+  <div class="pizza-card-content">
+    <div class="caption">
+      <h3 class="title">{{ pizza().title }}</h3>
+      <h4 class="subtitle">{{ pizza().subtitle }}</h4>
+      <p class="description">{{ pizza().description }}</p>
+    </div>
+
+    <div class="options">
+      @for(option of pizza().options; track option.id) {
+      <app-option [option]="option" />
+      }
+    </div>
+  </div>
+</div>
