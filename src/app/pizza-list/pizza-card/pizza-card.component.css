@@ -1,4 +1,5 @@
 .container {
+  box-sizing: border-box;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -14,24 +15,33 @@
 }
 
 img {
-  max-width: 250px;
+  max-width: 248px;
+  margin: 1px;
+}
+
+.caption {
+  padding: 9px;
 }
 
 .title {
   color: #de722a;
   font-weight: bolder;
   margin-top: 0;
+  font-size: 24px;
+  margin-bottom: 9px;
 }
 
 .subtitle {
   color: #a4a2a2;
   margin: 0;
+  font-size: 12px;
 }
 
 .description {
-  margin-bottom: 0;
-  font-size: 1.25rem;
+  margin: 0;
+  font-size: 12px;
   overflow-wrap: break-word;
+  line-height: 1.42857143;
 }
 
 .options {

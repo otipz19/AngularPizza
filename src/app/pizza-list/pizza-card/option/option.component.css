@@ -11,7 +11,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.size {
+  margin-left: 3px;
+}
+
+.weight {
+  margin-left: 3px;
 }
 
 .buy-section {
@@ -30,12 +39,16 @@
 }
 
 .value {
-  font-size: 2.5rem;
-  font-weight: 550;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 .currency {
-  font-size: 1.25rem;
+  font-weight: bolder;
+}
+
+.buy-btn > button {
+  color: white;
 }
 
 .buy-btn > button {
