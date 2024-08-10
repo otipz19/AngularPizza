@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { FilterComponent } from "./filter/filter.component";
 import { Filter } from './filter/filter.model';
 import { filters as DEFINED_FILTERS } from './defined-filters';
@@ -14,6 +14,8 @@ import { PizzaListService } from '../pizza-list/pizza-list.service';
 export class FiltersComponent {
   private readonly pizzaListService = inject(PizzaListService);
   filters: Filter[] = DEFINED_FILTERS;
+
+  pizzaCount = computed(() => this.pizzaListService.filteredPizza().length);
 
   onFilter(filter: Filter) {
     this.pizzaListService.setFilter(filter);

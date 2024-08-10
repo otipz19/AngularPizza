@@ -1,6 +1,6 @@
 <div class="title">
   <label>Усі піци</label>
-  <span id="products-count" class="round-span">8</span>
+  <span id="products-count" class="round-span">{{pizzaCount()}}</span>
 </div>
 <div class="category-list">
   @for(filter of filters; track filter.value) {
