@@ -1,0 +1,140 @@
+:host {
+  z-index: 2;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 0px 10px 0px 10px;
+}
+
+.my-badge {
+  position: relative;
+}
+
+.my-text {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  width: 100px;
+}
+.pizza {
+  font-size: 1.5rem;
+}
+
+.kma {
+  font-size: 2rem;
+}
+
+img {
+  position: absolute;
+  top: -650px;
+  z-index: -1;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  padding: 0px 15px;
+}
+.upper-part {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #a1a1a1;
+  border-bottom: 1px solid #a1a1a1;
+  padding-top: 5px;
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 25px;
+  padding-bottom: 5px;
+}
+.info div {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.tel {
+  height: 100%;
+  font-size: 1rem;
+}
+
+@media (min-width: 650px) {
+  .tel {
+    font-size: 2rem;
+  }
+}
+
+.time {
+  font-size: 1rem;
+  margin-bottom: 3px;
+  display: none;
+}
+
+@media (min-width: 850px) {
+  .time {
+    display: flex;
+  }
+}
+
+.delivery {
+  font-size: 1.5rem;
+  margin-bottom: 1px;
+  display: none;
+}
+
+@media (min-width: 1050px) {
+  .delivery {
+    display: flex;
+  }
+}
+
+.upper-part > button {
+  justify-self: end;
+  background-color: #e6ac4f;
+  border-color: #de722a;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  /* // @media (max-width: 650px) {
+      //     visibility: hidden;
+      // } */
+}
+
+.tabs a {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+  padding: 1px;
+  border: solid transparent 1px;
+}
+
+.tabs a:hover {
+  background-color: #e6ac4f;
+  border: solid #de722a 1px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px #e6ac4f;
+}
