@@ -12,5 +12,5 @@ import { PizzaCardComponent } from "./pizza-card/pizza-card.component";
 export class PizzaListComponent{
     private pizzaListService = inject(PizzaListService);
 
-    pizzaList = this.pizzaListService.get();
+    pizzaList = this.pizzaListService.filteredPizza;
 }

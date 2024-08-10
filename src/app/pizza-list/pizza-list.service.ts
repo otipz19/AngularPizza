@@ -1,12 +1,22 @@
-import { Injectable } from '@angular/core';
+import { computed, Injectable, signal } from '@angular/core';
 import { Pizza } from './pizza-card/pizza.model';
 import { PIZZA_LIST } from './pizza-list.data';
+import { Filter } from '../filters/filter/filter.model';
 
 @Injectable({ providedIn: 'root' })
 export class PizzaListService {
-    private pizzaList = PIZZA_LIST;
+  private pizzaList: Pizza[] = PIZZA_LIST;
+  private filter = signal<Filter | undefined>(undefined);
 
-    get(filter?: string) {
-        return [...this.pizzaList];
+  filteredPizza = computed(() => {
+    if (this.filter()) {
+      return this.filter()!.filter(this.pizzaList);
+    } else {
+      return this.pizzaList;
     }
+  });
+
+  setFilter(filter: Filter): void {
+    this.filter.set(filter);
+  }
 }

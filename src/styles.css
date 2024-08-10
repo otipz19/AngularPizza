@@ -28,3 +28,16 @@ body {
     border: 1px solid transparent;
     border-radius: 4px;
 }
+
+.round-span {
+    display: flex;
+    background-color: #de722a;
+    color: white;
+    font-weight: bold;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+}
