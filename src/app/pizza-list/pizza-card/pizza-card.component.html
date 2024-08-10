@@ -14,7 +14,7 @@
 
     <div class="options">
       @for(option of pizza().options; track option.id) {
-      <app-option [option]="option" />
+      <app-option [option]="option" (buy)="onBuy($event)"/>
       }
     </div>
   </div>

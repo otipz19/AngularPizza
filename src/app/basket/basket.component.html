@@ -1,0 +1,7 @@
+<app-basket-header/>
+<div class="orders-list">
+    @for(item of basket(); track item.id) {
+        <app-basket-item [item]="item"/>
+    }
+</div>
+<app-basket-footer/>

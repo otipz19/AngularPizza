@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { PizzaOption } from './option.model';
 
 @Component({
@@ -10,4 +10,9 @@ import { PizzaOption } from './option.model';
 })
 export class OptionComponent {
   option = input.required<PizzaOption>();
+  buy = output<PizzaOption>();
+
+  onBuy() {
+    this.buy.emit(this.option());
+  }
 }

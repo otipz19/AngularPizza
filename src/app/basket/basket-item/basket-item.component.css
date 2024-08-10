@@ -1,0 +1,103 @@
+:host {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
+  padding: 10px 0px 10px 20px;
+  border-bottom: 1px #a4a2a2 solid;
+  min-height: 120px;
+  overflow: hidden;
+}
+
+:host > img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: -50px;
+}
+
+.order-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5px;
+}
+.order-card-content .title {
+  font-weight: bolder;
+  color: #de722a;
+}
+.pizza-title {
+  font-size: 2rem;
+}
+
+.option-subtitle {
+  font-size: 1.5rem;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.cost {
+  min-width: 6ch;
+}
+
+.value {
+  min-width: 2ch;
+  text-align: center;
+}
+
+button {
+  display: flex;
+  font-weight: bold;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  color: white;
+  border-style: solid;
+}
+
+.amount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.sub {
+  background-color: #d14437;
+  border-color: #e72e1d;
+}
+
+.add {
+  background-color: #51d234;
+  border-color: #43e31f;
+}
+
+.cancel {
+  background-color: white;
+  border-color: rgb(214, 212, 212);
+  color: red;
+}
+
+@media (min-width: 1400px) {
+  .cancel {
+    margin-left: 20px;
+  }
+}

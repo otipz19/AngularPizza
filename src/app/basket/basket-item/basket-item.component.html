@@ -1,0 +1,30 @@
+<div class="order-card-content">
+  <div class="title">
+    <label class="pizza-title">{{item().pizza.title}}</label>
+    <label class="option-subtitle">{{' (' + item().option.title + ')'}}</label>
+  </div>
+
+  <div class="stats">
+    <div>
+      <img src="assets/size-icon.svg" />
+      <label class="size">{{item().option.size}}</label>
+    </div>
+    <div>
+      <img src="assets/weight.svg" />
+      <label class="weight">{{item().option.weight}}</label>
+    </div>
+  </div>
+
+  <div class="settings">
+    <label class="cost">{{item().totalPrice}}</label>
+
+    <div class="amount">
+      <button class="sub btn btn-primary" (click)="onReduce()">-</button>
+      <label class="value">{{item().amount}}</label>
+      <button class="add btn btn-primary" (click)="onAdd()">+</button>
+    </div>
+
+    <button class="cancel btn btn-primary" (click)="onRemove()">x</button>
+  </div>
+</div>
+<img src="assets/pizza_1.jpg" />
