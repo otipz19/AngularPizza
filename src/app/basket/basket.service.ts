@@ -1,10 +1,18 @@
-import { computed, Injectable, signal } from '@angular/core';
+import {
+  afterNextRender,
+  computed,
+  effect,
+  Injectable,
+  signal,
+} from '@angular/core';
 import { BasketItem } from './basket-item/basket-item.model';
 import { PizzaOption } from '../pizza-list/pizza-card/option/option.model';
 import { Pizza } from '../pizza-list/pizza-card/pizza.model';
 
 @Injectable({ providedIn: 'root' })
 export class BasketService {
+  private readonly LS_KEY = 'ANGULAR_PIZZA_BASKET';
+
   private _basket = signal<BasketItem[]>([]);
   basket = this._basket.asReadonly();
 
@@ -12,7 +20,20 @@ export class BasketService {
     this._basket().reduce((total, curItem) => total + curItem.totalPrice, 0)
   );
 
+  constructor() {
+    let savedBasket = window.localStorage.getItem(this.LS_KEY);
+    if (savedBasket) {
+      let parsed: {pizza: Pizza, option: PizzaOption, amount: number}[] = JSON.parse(savedBasket);
+      this._basket.set(parsed.map(item => new BasketItem(item.pizza, item.option, item.amount)));
+    }
+
+    effect(() => {
+      window.localStorage.setItem(this.LS_KEY, JSON.stringify(this._basket()));
+    });
+  }
+
   add(pizza: Pizza, option: PizzaOption) {
+    console.log(this._basket());
     let item = this.find(pizza, option);
     if (item) {
       item.amount++;

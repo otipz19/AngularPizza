@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
 import { BasketHeaderComponent } from './basket-header/basket-header.component';
 import { BasketFooterComponent } from './basket-footer/basket-footer.component';
 import { BasketItemComponent } from './basket-item/basket-item.component';

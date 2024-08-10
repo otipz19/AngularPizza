@@ -16,5 +16,9 @@ export class BasketItem {
     return this.option.price * this.amount;
   }
 
-  constructor(public pizza: Pizza, public option: PizzaOption) {}
+  constructor(public pizza: Pizza, public option: PizzaOption, amount?: number) {
+    if(amount) {
+      this.amount = amount;
+    }
+  }
 }
