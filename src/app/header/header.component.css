@@ -24,12 +24,15 @@
   gap: 5px;
   width: 100px;
 }
+
 .pizza {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-weight: bolder;
 }
 
 .kma {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 
 img {
@@ -72,18 +75,20 @@ img {
 .tel {
   height: 100%;
   font-size: 1rem;
+  font-weight: bolder;
 }
 
 @media (min-width: 650px) {
   .tel {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
 .time {
-  font-size: 1rem;
+  font-size: 0.75rem;
   margin-bottom: 3px;
   display: none;
+  font-weight: bolder;
 }
 
 @media (min-width: 850px) {
@@ -93,9 +98,10 @@ img {
 }
 
 .delivery {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-bottom: 1px;
   display: none;
+  font-weight: bolder;
 }
 
 @media (min-width: 1050px) {
@@ -108,6 +114,7 @@ img {
   justify-self: end;
   background-color: #e6ac4f;
   border-color: #de722a;
+  color: white;
 }
 
 .tabs {
