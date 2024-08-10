@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: stretch;
   gap: 15px;
+  font-weight: bolder;
 }
 
 .total {
@@ -27,4 +28,5 @@
   background-color: #e6ac4f;
   border-color: #de722a;
   width: 100%;
+  color: white;
 }

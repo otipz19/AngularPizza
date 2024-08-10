@@ -1,7 +1,14 @@
 :host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+    width: 90%;
 }
 
 .pizza-container {

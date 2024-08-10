@@ -6,7 +6,6 @@
   width: 100%;
   padding: 10px 0px 10px 20px;
   border-bottom: 1px #a4a2a2 solid;
-  min-height: 120px;
   overflow: hidden;
 }
 
@@ -14,26 +13,29 @@
   position: absolute;
   width: 100px;
   height: 100px;
-  right: -50px;
+  right: -30px;
 }
 
 .order-card-content {
+  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 5px;
+  gap: 0px;
 }
+
 .order-card-content .title {
   font-weight: bolder;
   color: #de722a;
 }
+
 .pizza-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .option-subtitle {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .stats {
@@ -44,13 +46,23 @@
   gap: 20px;
 }
 
+.stats > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+  font-weight: bolder;
+}
+
 .settings {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  font-weight: bolder;
 }
+
 .cost {
   min-width: 6ch;
 }
@@ -80,6 +92,7 @@ button {
   align-items: center;
   gap: 10px;
 }
+
 .sub {
   background-color: #d14437;
   border-color: #e72e1d;
