@@ -1,0 +1,41 @@
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  padding: 30px 0px 15px 0px;
+  border-top: #e5e5e5 solid 1px;
+  color: #9a9a9a;
+}
+
+p {
+  margin: 0;
+}
+
+.discount-badge {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100px;
+  color: white;
+  padding: 0px 15px 0px 15px;
+  gap: 15px;
+}
+
+.offer {
+  text-align: center;
+  border-bottom: dotted 5px #de722a;
+}
+
+img {
+  z-index: -1;
+  position: absolute;
+  top: -565px;
+}
