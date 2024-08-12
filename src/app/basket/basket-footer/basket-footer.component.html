@@ -3,5 +3,5 @@
   <label class="total-price">{{ totalPrice() }} грн.</label>
 </div>
 <div class="order-btn-container">
-  <button appBtn hover class="btn btn-primary order-btn">Замовити</button>
+  <button appBtn hover [disabled]="disableOrderBtn()" class="btn btn-primary order-btn">Замовити</button>
 </div>

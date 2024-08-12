@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { BasketService } from '../basket.service';
 import { ButtonComponent } from '../../shared/button/button.component';
 
@@ -13,4 +13,5 @@ export class BasketFooterComponent {
   private readonly basketService = inject(BasketService);
 
   totalPrice = this.basketService.totalPrice;
+  disableOrderBtn = computed(() => this.basketService.basket().length === 0);
 }
