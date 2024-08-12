@@ -1,4 +1,4 @@
-import { Component, HostBinding, input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Tag } from './tag.model';
 
 @Component({

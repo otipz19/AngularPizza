@@ -1,5 +1,5 @@
-import { PizzaOption } from '../../pizza-list/pizza-card/option/option.model';
-import { Pizza } from '../../pizza-list/pizza-card/pizza.model';
+import { PizzaOption } from '../../shop/pizza-list/pizza-card/option/option.model';
+import { Pizza } from '../../shop/pizza-list/pizza-card/pizza.model';
 
 export class BasketItem {
   amount: number = 1;

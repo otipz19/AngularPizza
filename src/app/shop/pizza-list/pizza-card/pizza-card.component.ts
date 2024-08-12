@@ -3,7 +3,7 @@ import { OptionComponent } from "./option/option.component";
 import { Pizza } from "./pizza.model";
 import { TagComponent } from "./tag/tag.component";
 import { PizzaOption } from "./option/option.model";
-import { BasketService } from "../../basket/basket.service";
+import { BasketService } from "../../../basket/basket.service";
 
 @Component({
     selector: 'app-pizza-card',

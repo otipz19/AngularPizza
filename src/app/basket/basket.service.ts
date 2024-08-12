@@ -6,8 +6,8 @@ import {
   signal,
 } from '@angular/core';
 import { BasketItem } from './basket-item/basket-item.model';
-import { PizzaOption } from '../pizza-list/pizza-card/option/option.model';
-import { Pizza } from '../pizza-list/pizza-card/pizza.model';
+import { PizzaOption } from '../shop/pizza-list/pizza-card/option/option.model';
+import { Pizza } from '../shop/pizza-list/pizza-card/pizza.model';
 
 @Injectable({ providedIn: 'root' })
 export class BasketService {

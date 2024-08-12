@@ -1,6 +1,6 @@
 import { Component, input, output } from '@angular/core';
 import { PizzaOption } from './option.model';
-import { ButtonComponent } from '../../../shared/button/button.component';
+import { ButtonComponent } from '../../../../shared/button/button.component';
 
 @Component({
   selector: 'app-option',

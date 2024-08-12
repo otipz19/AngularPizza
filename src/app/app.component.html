@@ -1,17 +1,13 @@
-<div class="main-container">
-  <div>
-    <nav>
+<div class="main-container" [class.with-sidebar]="shouldShowSidebar" [class.without-sidebar]="!shouldShowSidebar">
+  <main>
       <app-header />
-    </nav>
-
-    <main>
-      <app-filters />
-      <app-pizza-list />
+      <router-outlet/>
       <app-footer />
-    </main>
-  </div>
+  </main>
 
-  <aside>
-    <app-basket />
-  </aside>
+  @if(shouldShowSidebar) {
+    <aside>
+      <app-basket />
+    </aside>
+  }
 </div>

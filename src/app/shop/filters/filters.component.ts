@@ -3,7 +3,7 @@ import { FilterComponent } from "./filter/filter.component";
 import { Filter } from './filter/filter.model';
 import { filters as DEFINED_FILTERS } from './defined-filters';
 import { PizzaListService } from '../pizza-list/pizza-list.service';
-import { RoundSpanComponent } from '../shared/round-span/round-span.component';
+import { RoundSpanComponent } from '../../shared/round-span/round-span.component';
 
 @Component({
   selector: 'app-filters',
