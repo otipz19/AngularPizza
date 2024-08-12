@@ -1,13 +1,1 @@
-<div class="title">
-  @if(!activeFilter || activeFilter.value === 'all') {
-    <label>Усі піци</label>
-  } @else {
-    <label>Піци {{activeFilter.text.toLocaleLowerCase()}}</label>
-  }
-  <span appRoundSpan>{{ pizzaCount() }}</span>
-</div>
-<div class="category-list">
-  @for(filter of filters; track filter.value) {
-  <app-filter [filter]="filter" (choose)="onFilter($event)" />
-  }
-</div>
+<app-radio-options [title]="title" [amount]="pizzaCount()" [options]="filters" [activate]="0" (choose)="onFilter($event)"/>
