@@ -1,10 +1,11 @@
 import { Component, computed, inject } from '@angular/core';
 import { BasketService } from '../basket.service';
+import { RoundSpanComponent } from '../../shared/round-span/round-span.component';
 
 @Component({
   selector: 'app-basket-header',
   standalone: true,
-  imports: [],
+  imports: [RoundSpanComponent],
   templateUrl: './basket-header.component.html',
   styleUrl: './basket-header.component.css'
 })

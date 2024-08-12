@@ -110,13 +110,6 @@ img {
   }
 }
 
-.upper-part > button {
-  justify-self: end;
-  background-color: #e6ac4f;
-  border-color: #de722a;
-  color: white;
-}
-
 .tabs {
   display: flex;
   flex-direction: row;

@@ -19,11 +19,6 @@ label {
   font-weight: bold;
 }
 
-.round-span {
-  height: 15px;
-  width: 15px;
-}
-
 .category-list {
   display: flex;
   flex-direction: row;

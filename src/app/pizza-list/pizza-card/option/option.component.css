@@ -46,16 +46,3 @@
 .currency {
   font-weight: bolder;
 }
-
-.buy-btn > button {
-  color: white;
-}
-
-.buy-btn > button {
-  background-color: #e6ac4f;
-  border-color: #de722a;
-}
-
-.buy-btn > button:hover {
-  box-shadow: 0px 0px 5px 1px #e6ac4f;
-}

@@ -1,10 +1,11 @@
 import { Component, input, output } from '@angular/core';
 import { PizzaOption } from './option.model';
+import { ButtonComponent } from '../../../shared/button/button.component';
 
 @Component({
   selector: 'app-option',
   standalone: true,
-  imports: [],
+  imports: [ButtonComponent],
   templateUrl: './option.component.html',
   styleUrl: './option.component.css'
 })
