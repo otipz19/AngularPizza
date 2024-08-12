@@ -1,0 +1,10 @@
+<div class="title">
+    {{title()}}
+    <span appRoundSpan>{{ amount() }}</span>
+  </div>
+  <div class="category-list">
+    @for(option of options(); track option.value) {
+    <app-radio-option [option]="option" (choose)="onChoose($event)" />
+    }
+  </div>
+  

@@ -1,6 +1,7 @@
+import { RadioOption } from '../../../shared/radio-options/radio-option/radio-option.model';
 import { Pizza } from '../../pizza-list/pizza-card/pizza.model';
 
-export class Filter {
+export class Filter implements RadioOption {
   value: string;
   text: string;
 
