@@ -20,6 +20,9 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    min-height: 100vh;
     gap: 20px;
     margin: 0 0;
 }

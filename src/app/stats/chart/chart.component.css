@@ -1,0 +1,36 @@
+google-chart {
+  margin: 25px;
+  border: 1px solid #a4a2a2;
+  box-shadow: 0px 0px 5px 0px #a4a2a2;
+  width: 90vw;
+  height: 50vh;
+  align-self: center;
+}
+
+@media (min-width: 600px) {
+  google-chart {
+    width: 85vw;
+    height: 50vh;
+  }
+}
+
+@media (min-width: 800px) {
+  google-chart {
+    width: 80vw;
+    height: 50vh;
+  }
+}
+
+@media (min-width: 1000px) {
+  google-chart {
+    width: 75vw;
+    height: 50vh;
+  }
+}
+
+@media (min-width: 1400px) {
+  google-chart {
+    width: 50vw;
+    height: 50vh;
+  }
+}
