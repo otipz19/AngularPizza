@@ -7,8 +7,7 @@
 .list-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    width: 90%;
+    width: 80%;
 }
 
 .pizza-container {
