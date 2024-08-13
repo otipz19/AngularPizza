@@ -14,5 +14,10 @@ export const routes: Routes = [
     {
         path: 'stats',
         loadComponent: () => import('./stats/stats.component').then(mod => mod.StatsComponent),
+    },
+    {
+        path: '**',
+        redirectTo: 'shop',
+        pathMatch: 'full',
     }
 ];
