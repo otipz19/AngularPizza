@@ -4,7 +4,7 @@ import { Chart } from './chart.model';
 import { Injectable } from '@angular/core';
 
 @Injectable({providedIn: 'root'})
-export class AmountChart implements Chart {
+export class AmountChart extends Chart {
   type = ChartType.PieChart;
   title = 'Статистика розподілу кількості замовленої піци';
   columns = ['Назва', 'Кількість'];
@@ -28,9 +28,8 @@ export class AmountChart implements Chart {
       '#ab5e14', // Deep sienna
     ],
   };
-  data!: Row[];
-
-  resolveData(basketItems: BasketItem[]) {
-    this.data = basketItems.map((item) => [item.pizza.title, item.amount]);
+  
+  protected override mapBasketItem(item: BasketItem): Row {
+    return [item.pizza.title, item.amount];
   }
 }
