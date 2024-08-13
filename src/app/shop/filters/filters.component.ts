@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { Filter } from './filter/filter.model';
 import { filters as DEFINED_FILTERS } from './defined-filters';
 import { PizzaListService } from '../pizza-list/pizza-list.service';
@@ -17,18 +17,19 @@ export class FiltersComponent {
   private readonly pizzaListService = inject(PizzaListService);
 
   filters: Filter[] = DEFINED_FILTERS;
-  activeFilter?: Filter;
+  activeFilter = signal<Filter | undefined>(undefined);
 
-  title =
-    !this.activeFilter || this.activeFilter.value === 'all'
+  title = computed(() =>
+    !this.activeFilter() || this.activeFilter()!.value === 'all'
       ? 'Усі піци'
-      : `Піци ${this.activeFilter.text.toLocaleLowerCase()}`;
+      : `Піци ${this.activeFilter()!.text.toLocaleLowerCase()}`
+  );
 
   pizzaCount = computed(() => this.pizzaListService.filteredPizza().length);
 
   onFilter(option: RadioOption) {
     const filter = option as Filter;
     this.pizzaListService.setFilter(filter);
-    this.activeFilter = filter;
+    this.activeFilter.set(filter);
   }
 }
