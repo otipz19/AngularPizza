@@ -33,7 +33,6 @@ export class BasketService {
   }
 
   add(pizza: Pizza, option: PizzaOption) {
-    console.log(this._basket());
     let item = this.find(pizza, option);
     if (item) {
       item.amount++;

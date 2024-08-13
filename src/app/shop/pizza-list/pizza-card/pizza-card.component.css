@@ -17,6 +17,7 @@
 img {
   max-width: 248px;
   margin: 1px;
+  /* -webkit-user-drag: none; */
 }
 
 .caption {

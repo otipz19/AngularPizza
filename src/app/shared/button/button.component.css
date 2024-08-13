@@ -28,7 +28,7 @@
 }
 
 :host:disabled {
-  cursor: none;
+  cursor: not-allowed;
   background-color: #aa8c5b;
   border-color: #9d6845;
 }

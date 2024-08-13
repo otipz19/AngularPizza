@@ -12,6 +12,7 @@
 
 .my-badge {
   position: relative;
+  user-select: none;
 }
 
 .my-text {
