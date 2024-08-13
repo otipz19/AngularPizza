@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { ShopComponent } from './shop/shop.component';
-import { StatsComponent } from './stats/stats.component';
 
 export const routes: Routes = [
     {
@@ -14,6 +13,6 @@ export const routes: Routes = [
     },
     {
         path: 'stats',
-        component: StatsComponent,
+        loadComponent: () => import('./stats/stats.component').then(mod => mod.StatsComponent),
     }
 ];

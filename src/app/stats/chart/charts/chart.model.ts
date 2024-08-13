@@ -10,7 +10,14 @@ export abstract class Chart {
   abstract title: string;
   abstract columns: string[];
   abstract options: { colors?: string[]; is3D?: boolean };
-  readonly data: Row[] = this.resolveData();
+
+  private resolvedData?: Row[]; 
+  data(): Row[] {
+    if(!this.resolvedData) {
+      this.resolvedData = this.resolveData();
+    }
+    return this.resolvedData;
+  }
 
   private resolveData(): Row[] {
     return this.basketService.basket().map(this.mapBasketItem);

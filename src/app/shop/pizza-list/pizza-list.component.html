@@ -1,7 +1,9 @@
 <div class="list-container">
   @for(pizza of pizzaList(); track pizza.id) {
   <div class="pizza-container">
-    <app-pizza-card [pizza]="pizza" />
+    @defer (on idle) {
+      <app-pizza-card [pizza]="pizza" />
+    }
   </div>
   }
 </div>
